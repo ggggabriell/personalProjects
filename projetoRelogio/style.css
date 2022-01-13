@@ -1,52 +1,52 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@400;600;700&family=Roboto+Mono:wght@300;600;700&display=swap');
 *{
+  
     box-sizing: border-box; 
-}
-
-html, body{
     margin:0;
-    height: 100%;
+    padding: 0;
 }
 
+html, body{  
+    height: 100vh;
+    width: 100vw;
+}
 
-.main{
+.container{
     background: url("images/hd-high-rise-buildings-cityscape-h1xqu3ij5aw0m3mr.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: fixed;
     height: 100%;
-   
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.main-2{
+.header{
     display: flex;
     flex-direction: column;
-    padding: 5% 15%;
-    height: 100%;
+    height: 80%;
+    width: 80%;
     justify-content: space-between;
-    grid-template-columns: 1fr 1fr;
-  
+   
 }
-
 
 .textos{  
     color:#eee;
-    text-shadow: 1px 0px 6px #222;
-   
-}
+    text-shadow: 1px 0px 6px #222; 
 
+}
 
 /* Frase */
 .frase{
     font-family:'Roboto mono', sans-serif; 
     width: 50%;
-
+    font-size: 20px;
 }
 
 .frase-autor{
     font-weight: bold;
-    font-size: 1.2em;
     margin-top: 20px;
 }
 
@@ -55,48 +55,26 @@ html, body{
 
 .relogio{
     font-family: 'Bebas Neue';    
-    font-size: 2.5em;
+    font-size: 60px;
     text-align: left;
     justify-content: space-between;
     display: flex;
-
+    width: 100%;
     
 } 
 
 .mostrar-relogio{
-    font-size: 5.5em;
+    font-size: 200px;
     color: #eee;
     text-shadow: 1px 0px 6px #222;
-    display: flex;
+    transition: all 0.2 ease;
 }
 
-.sun{
-    width: 30px;
-    margin-right: 7px;
-}
 
-.relogio-esquerda{
 
-    display: flex;
-    flex-direction: column;
-    
-}
+
 
 /* Botao More */
-.more{
-    color: #eee;
-    display: flex;
-    
-}
-
-.relogio-direita{
-    display: flex;
-    align-items: flex-end;
-    justify-content:flex-end;
-
-
-}
-
 .btn-more{
     cursor: pointer;
     font-family:'Roboto mono', sans-serif;
@@ -108,66 +86,41 @@ html, body{
     text-align: center;
     font-size: 35px;
     border: 1px solid #444;
+    align-self: flex-end;
+     
 }
 
 /* media */
 
 @media (max-width: 768px){
-    .frase{
-        display: flex;
-        flex-direction: column;
-        font-size: 15px;
-        width: 90%;
+    .header{
+        width: 95%;
+        height: 95%;
     }
-
+    .frase{
+        font-size: 15px;
+        width: 100%;
+    }
 
     .relogio{ 
-        font-size: 2em;
+        font-size: 35px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
     } 
-    
+
     .mostrar-relogio{
-        font-size: 3em;
+        font-size: 120px;
     }
+
+    .btn-more{ 
+        align-self: center;
+        margin-top: 20px;
+    }  
 
     .sun{
-        width: 20px;
-        margin-right: 5px;
+        width: 30px;
+        margin-right: 7px;
     }
-
-    .btn-more{ 
-        width: 70px;
-        height: 30px;
-        border-radius: 25px;
-        text-align: center;
-        font-size: 17px;
-    }
-    
-}
-
-@media (max-width: 300px){
-    .frase{
-        display: flex;
-        flex-direction: column;
-        font-size: 10px;
-        width: 90%;
-    }
-
-
-    .relogio{ 
-        font-size: 1.5em;
-    } 
-    
-    .mostrar-relogio{
-        font-size: 2.5em;
-    }
-
-    .btn-more{ 
-        width: 50px;
-        height: 25px;
-        border-radius: 25px;
-        text-align: center;
-        font-size: 14px;
-    }
-
-
 }

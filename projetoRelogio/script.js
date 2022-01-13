@@ -1,6 +1,6 @@
 
 function displayClock(){
-  var display = new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+  var display = new Date().toLocaleTimeString(['en'], {hour: '2-digit', minute:'2-digit'});
   relogio.innerHTML = display;
 
     setTimeout(displayClock, 1000); 
